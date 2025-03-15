@@ -1,5 +1,139 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>老铁的碎碎念</title><link>https://bannysway.github.io</link><description>自留地，科技、艺术，哲学，文学</description><copyright>老铁的碎碎念</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/119055643?v=4</url><title>avatar</title><link>https://bannysway.github.io</link></image><lastBuildDate>Sat, 15 Mar 2025 15:29:06 +0000</lastBuildDate><managingEditor>老铁的碎碎念</managingEditor><ttl>60</ttl><webMaster>老铁的碎碎念</webMaster><item><title>中国地理知识</title><link>https://bannysway.github.io/post/zhong-guo-di-li-zhi-shi.html</link><description>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>老铁的碎碎念</title><link>https://bannysway.github.io</link><description>自留地，科技、艺术，哲学，文学</description><copyright>老铁的碎碎念</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/119055643?v=4</url><title>avatar</title><link>https://bannysway.github.io</link></image><lastBuildDate>Sat, 15 Mar 2025 15:46:04 +0000</lastBuildDate><managingEditor>老铁的碎碎念</managingEditor><ttl>60</ttl><webMaster>老铁的碎碎念</webMaster><item><title>PYTHON基础语法1</title><link>https://bannysway.github.io/post/PYTHON-ji-chu-yu-fa-1.html</link><description>
+
+&gt; [!important] ## 基础知识  
+
+
+
+
+## 输入输出
++ input()函数：
+	+ 变量，列表[]， 字符，字符串，
+	+ 嵌套函数
+		+ int()——转化整数int(input())
+		+ ord()——转化ASCII码值 ord(input())
+	+ 换行 input('请输入： \n')
++ 
++ 《python速查手册 基础卷》
+	+ 需要反复阅读部分：P7~P8，P20，P22自己写一遍
+	+ 
+
+## 1.1 print玩法
+- 三角形函数
+```a,b,c = map(int,input('请输入三角形的三条变长,用空格间隔：').split())
+
+if a+b&gt;c and a+c&gt;b and b+c&gt;a:
+
+    ans = 'can be a triangle'
+
+    if a==b and b==c:
+
+        print('can be a equilateral triangle')
+
+    elif a==b or b==c or a==c:
+
+        print('can be a isosceles triangle')
+
+        if a*a+b*b==c*c or b*b+c*c==a*a or c*c+a*a==b*b:
+
+            print('can be a right triangle')
+
+        else:
+
+            print('can be a triangle')
+
+    else:
+
+        print('can be a normal triangle')
+
+else:
+
+    print('can not be a triangle')
+```
+
+
++ 如何插入代码块
+```
+name='ada love &amp; peace'  
+```
+name='ada love &amp; peace'  
+# title 函数是改变首字母大小写  
+```
+print(name.title())  
+```
+print(name.title())  
+# upper函数是全部改为大写  
+```
+print(name.upper())  
+```
+print(name.upper())  
+# lower函数是全部改为小写  
+```
+print(name.lower())  
+```
+print(name.lower())  
+# 在字符串中使用变量,
+注意变量赋值要有“”，使用f函数应是“{} {}”的结构，f是format函数的缩写  
+```
+first_name='ada'  
+last_name='lovelace'  
+full_name=f'{first_name} {last_name}'  
+print(full_name)
+print(f'x is {x}, y is {y}, name is {', '.join(name)}, a is {a}, b is {b}')
+```
+# f函数里面可以插入字符串 
+可以嵌套“”的字符串结构，比如“hello”“，' '!'  
+```
+print(f'Hello, {full_name.title()}!!')  
+```
+# f字符串来创建消息  
+```
+message=f'HELLO, {full_name.upper()}! AD.'  
+print(message)  
+```
+# 字符串添加制表位
+\t,注意第二个print和第三个print之间的区别，帮助我们了解格式化字符串的应用  
+```
+message=f'HELLO, {full_name.upper()}! AD &amp; CONGTOU.'  
+print(message)  
+print('\t message')  
+print(f'\t{message}')  
+```
+  
+# 字符串增加\t和\n的变形  
+```
+print(f'languages:\n
+Python\nC\n{message}!')  
+print(f'languages:\n\tPython\n\tC\n\t{message}!')  
+```
+  
+# 字符串删除空白，
+利用rstrip()可以批量删除空白  
+```
+favorite_language='python '  
+favorite_language=favorite_language.rstrip()  
+print(f'\t{favorite_language}!~~~!')  
+```
+  
+# 字符串删除不同的空白形式，
+可以采用rstrip，lstrip，strip不同的形式  
+```
+favorite_language=' python '  
+favorite_language=favorite_language.lstrip()  
+print(f'\t{favorite_language}!~~~!')  
+  
+favorite_language=' python '  
+favorite_language=favorite_language.rstrip()  
+print(f'\t{favorite_language}!~~~!')  
+  
+favorite_language=' python '  
+favorite_language=favorite_language.strip()  
+print(f'\t{favorite_language}!~~~!')  
+```
+  
+# 变量反复的赋值和调用非常麻烦，
+repr()是Python中的一个内置函数，它返回一个对象的“官方”字符串表示，也就是说，这个字符串表示  
+通常可以用来重新创建该对象。</description><guid isPermaLink="true">https://bannysway.github.io/post/PYTHON-ji-chu-yu-fa-1.html</guid><pubDate>Sat, 15 Mar 2025 15:34:57 +0000</pubDate></item><item><title>中国地理知识</title><link>https://bannysway.github.io/post/zhong-guo-di-li-zhi-shi.html</link><description>
  &gt; [!summary] ## 基本概念
 
 - [b] 中国的资源有多么分布不均匀

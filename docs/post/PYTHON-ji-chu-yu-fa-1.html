@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/119055643?v=4"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="
+
+> [!important] ## 基础知识  
+
+
+
+
+## 输入输出
++ input()函数：
+	+ 变量，列表[]， 字符，字符串，
+	+ 嵌套函数
+		+ int()——转化整数int(input())
+		+ ord()——转化ASCII码值 ord(input())
+	+ 换行 input('请输入： \n')
++ 
++ 《python速查手册 基础卷》
+	+ 需要反复阅读部分：P7~P8，P20，P22自己写一遍
+	+ 
+
+## 1.1 print玩法
+- 三角形函数
+```a,b,c = map(int,input('请输入三角形的三条变长,用空格间隔：').split())
+
+if a+b>c and a+c>b and b+c>a:
+
+    ans = 'can be a triangle'
+
+    if a==b and b==c:
+
+        print('can be a equilateral triangle')
+
+    elif a==b or b==c or a==c:
+
+        print('can be a isosceles triangle')
+
+        if a*a+b*b==c*c or b*b+c*c==a*a or c*c+a*a==b*b:
+
+            print('can be a right triangle')
+
+        else:
+
+            print('can be a triangle')
+
+    else:
+
+        print('can be a normal triangle')
+
+else:
+
+    print('can not be a triangle')
+```
+
+
++ 如何插入代码块
+```
+name='ada love & peace'  
+```
+name='ada love & peace'  
+# title 函数是改变首字母大小写  
+```
+print(name.title())  
+```
+print(name.title())  
+# upper函数是全部改为大写  
+```
+print(name.upper())  
+```
+print(name.upper())  
+# lower函数是全部改为小写  
+```
+print(name.lower())  
+```
+print(name.lower())  
+# 在字符串中使用变量,
+注意变量赋值要有“”，使用f函数应是“{} {}”的结构，f是format函数的缩写  
+```
+first_name='ada'  
+last_name='lovelace'  
+full_name=f'{first_name} {last_name}'  
+print(full_name)
+print(f'x is {x}, y is {y}, name is {', '.join(name)}, a is {a}, b is {b}')
+```
+# f函数里面可以插入字符串 
+可以嵌套“”的字符串结构，比如“hello”“，' '!'  
+```
+print(f'Hello, {full_name.title()}!!')  
+```
+# f字符串来创建消息  
+```
+message=f'HELLO, {full_name.upper()}! AD.'  
+print(message)  
+```
+# 字符串添加制表位
+\t,注意第二个print和第三个print之间的区别，帮助我们了解格式化字符串的应用  
+```
+message=f'HELLO, {full_name.upper()}! AD & CONGTOU.'  
+print(message)  
+print('\t message')  
+print(f'\t{message}')  
+```
+  
+# 字符串增加\t和\n的变形  
+```
+print(f'languages:\n
+Python\nC\n{message}!')  
+print(f'languages:\n\tPython\n\tC\n\t{message}!')  
+```
+  
+# 字符串删除空白，
+利用rstrip()可以批量删除空白  
+```
+favorite_language='python '  
+favorite_language=favorite_language.rstrip()  
+print(f'\t{favorite_language}!~~~!')  
+```
+  
+# 字符串删除不同的空白形式，
+可以采用rstrip，lstrip，strip不同的形式  
+```
+favorite_language=' python '  
+favorite_language=favorite_language.lstrip()  
+print(f'\t{favorite_language}!~~~!')  
+  
+favorite_language=' python '  
+favorite_language=favorite_language.rstrip()  
+print(f'\t{favorite_language}!~~~!')  
+  
+favorite_language=' python '  
+favorite_language=favorite_language.strip()  
+print(f'\t{favorite_language}!~~~!')  
+```
+  
+# 变量反复的赋值和调用非常麻烦，
+repr()是Python中的一个内置函数，它返回一个对象的“官方”字符串表示，也就是说，这个字符串表示  
+通常可以用来重新创建该对象。">
+<meta property="og:title" content="PYTHON基础语法1">
+<meta property="og:description" content="
+
+> [!important] ## 基础知识  
+
+
+
+
+## 输入输出
++ input()函数：
+	+ 变量，列表[]， 字符，字符串，
+	+ 嵌套函数
+		+ int()——转化整数int(input())
+		+ ord()——转化ASCII码值 ord(input())
+	+ 换行 input('请输入： \n')
++ 
++ 《python速查手册 基础卷》
+	+ 需要反复阅读部分：P7~P8，P20，P22自己写一遍
+	+ 
+
+## 1.1 print玩法
+- 三角形函数
+```a,b,c = map(int,input('请输入三角形的三条变长,用空格间隔：').split())
+
+if a+b>c and a+c>b and b+c>a:
+
+    ans = 'can be a triangle'
+
+    if a==b and b==c:
+
+        print('can be a equilateral triangle')
+
+    elif a==b or b==c or a==c:
+
+        print('can be a isosceles triangle')
+
+        if a*a+b*b==c*c or b*b+c*c==a*a or c*c+a*a==b*b:
+
+            print('can be a right triangle')
+
+        else:
+
+            print('can be a triangle')
+
+    else:
+
+        print('can be a normal triangle')
+
+else:
+
+    print('can not be a triangle')
+```
+
+
++ 如何插入代码块
+```
+name='ada love & peace'  
+```
+name='ada love & peace'  
+# title 函数是改变首字母大小写  
+```
+print(name.title())  
+```
+print(name.title())  
+# upper函数是全部改为大写  
+```
+print(name.upper())  
+```
+print(name.upper())  
+# lower函数是全部改为小写  
+```
+print(name.lower())  
+```
+print(name.lower())  
+# 在字符串中使用变量,
+注意变量赋值要有“”，使用f函数应是“{} {}”的结构，f是format函数的缩写  
+```
+first_name='ada'  
+last_name='lovelace'  
+full_name=f'{first_name} {last_name}'  
+print(full_name)
+print(f'x is {x}, y is {y}, name is {', '.join(name)}, a is {a}, b is {b}')
+```
+# f函数里面可以插入字符串 
+可以嵌套“”的字符串结构，比如“hello”“，' '!'  
+```
+print(f'Hello, {full_name.title()}!!')  
+```
+# f字符串来创建消息  
+```
+message=f'HELLO, {full_name.upper()}! AD.'  
+print(message)  
+```
+# 字符串添加制表位
+\t,注意第二个print和第三个print之间的区别，帮助我们了解格式化字符串的应用  
+```
+message=f'HELLO, {full_name.upper()}! AD & CONGTOU.'  
+print(message)  
+print('\t message')  
+print(f'\t{message}')  
+```
+  
+# 字符串增加\t和\n的变形  
+```
+print(f'languages:\n
+Python\nC\n{message}!')  
+print(f'languages:\n\tPython\n\tC\n\t{message}!')  
+```
+  
+# 字符串删除空白，
+利用rstrip()可以批量删除空白  
+```
+favorite_language='python '  
+favorite_language=favorite_language.rstrip()  
+print(f'\t{favorite_language}!~~~!')  
+```
+  
+# 字符串删除不同的空白形式，
+可以采用rstrip，lstrip，strip不同的形式  
+```
+favorite_language=' python '  
+favorite_language=favorite_language.lstrip()  
+print(f'\t{favorite_language}!~~~!')  
+  
+favorite_language=' python '  
+favorite_language=favorite_language.rstrip()  
+print(f'\t{favorite_language}!~~~!')  
+  
+favorite_language=' python '  
+favorite_language=favorite_language.strip()  
+print(f'\t{favorite_language}!~~~!')  
+```
+  
+# 变量反复的赋值和调用非常麻烦，
+repr()是Python中的一个内置函数，它返回一个对象的“官方”字符串表示，也就是说，这个字符串表示  
+通常可以用来重新创建该对象。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bannysway.github.io/post/PYTHON-ji-chu-yu-fa-1.html">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/119055643?v=4">
+<title>PYTHON基础语法1</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+.copy-feedback {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    color: var(--color-fg-on-emphasis);
+    background-color: var(--color-fg-muted);
+    border-radius: 3px;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">PYTHON基础语法1</h1>
+<div class="title-right">
+    <a href="https://bannysway.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/bannysway/bannysway.github.io/issues/10" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><blockquote>
+<p>[!important] ## 基础知识</p>
+</blockquote>
+<h2>输入输出</h2>
+<ul>
+<li>input()函数：
+<ul>
+<li>变量，列表[]， 字符，字符串，</li>
+<li>嵌套函数
+<ul>
+<li>int()——转化整数int(input())</li>
+<li>ord()——转化ASCII码值 ord(input())</li>
+</ul>
+</li>
+<li>换行 input("请输入： \n")</li>
+</ul>
+</li>
+<li></li>
+<li>《python速查手册 基础卷》
+<ul>
+<li>需要反复阅读部分：P7~P8，P20，P22自己写一遍</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<h2>1.1 print玩法</h2>
+<ul>
+<li>三角形函数</li>
+</ul>
+<pre lang="a,b,c" data-meta="= map(int,input(&quot;请输入三角形的三条变长,用空格间隔：&quot;).split())" class="notranslate"><code class="notranslate">
+if a+b&gt;c and a+c&gt;b and b+c&gt;a:
+
+    ans = "can be a triangle"
+
+    if a==b and b==c:
+
+        print("can be a equilateral triangle")
+
+    elif a==b or b==c or a==c:
+
+        print("can be a isosceles triangle")
+
+        if a*a+b*b==c*c or b*b+c*c==a*a or c*c+a*a==b*b:
+
+            print("can be a right triangle")
+
+        else:
+
+            print("can be a triangle")
+
+    else:
+
+        print("can be a normal triangle")
+
+else:
+
+    print("can not be a triangle")
+</code></pre>
+<ul>
+<li>如何插入代码块</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">name="ada love &amp; peace"  
+</code></pre>
+<p>name="ada love &amp; peace"</p>
+<h1>title 函数是改变首字母大小写</h1>
+<pre class="notranslate"><code class="notranslate">print(name.title())  
+</code></pre>
+<p>print(name.title())</p>
+<h1>upper函数是全部改为大写</h1>
+<pre class="notranslate"><code class="notranslate">print(name.upper())  
+</code></pre>
+<p>print(name.upper())</p>
+<h1>lower函数是全部改为小写</h1>
+<pre class="notranslate"><code class="notranslate">print(name.lower())  
+</code></pre>
+<p>print(name.lower())</p>
+<h1>在字符串中使用变量,</h1>
+<p>注意变量赋值要有“”，使用f函数应是“{} {}”的结构，f是format函数的缩写</p>
+<pre class="notranslate"><code class="notranslate">first_name="ada"  
+last_name="lovelace"  
+full_name=f"{first_name} {last_name}"  
+print(full_name)
+print(f"x is {x}, y is {y}, name is {', '.join(name)}, a is {a}, b is {b}")
+</code></pre>
+<h1>f函数里面可以插入字符串</h1>
+<p>可以嵌套“”的字符串结构，比如“hello”“，" "!"</p>
+<pre class="notranslate"><code class="notranslate">print(f"Hello, {full_name.title()}!!")  
+</code></pre>
+<h1>f字符串来创建消息</h1>
+<pre class="notranslate"><code class="notranslate">message=f"HELLO, {full_name.upper()}! AD."  
+print(message)  
+</code></pre>
+<h1>字符串添加制表位</h1>
+<p>\t,注意第二个print和第三个print之间的区别，帮助我们了解格式化字符串的应用</p>
+<pre class="notranslate"><code class="notranslate">message=f"HELLO, {full_name.upper()}! AD &amp; CONGTOU."  
+print(message)  
+print("\t message")  
+print(f"\t{message}")  
+</code></pre>
+<h1>字符串增加\t和\n的变形</h1>
+<pre class="notranslate"><code class="notranslate">print(f"languages:\n
+Python\nC\n{message}!")  
+print(f"languages:\n\tPython\n\tC\n\t{message}!")  
+</code></pre>
+<h1>字符串删除空白，</h1>
+<p>利用rstrip()可以批量删除空白</p>
+<pre class="notranslate"><code class="notranslate">favorite_language="python "  
+favorite_language=favorite_language.rstrip()  
+print(f"\t{favorite_language}!~~~!")  
+</code></pre>
+<h1>字符串删除不同的空白形式，</h1>
+<p>可以采用rstrip，lstrip，strip不同的形式</p>
+<pre class="notranslate"><code class="notranslate">favorite_language=" python "  
+favorite_language=favorite_language.lstrip()  
+print(f"\t{favorite_language}!~~~!")  
+  
+favorite_language=" python "  
+favorite_language=favorite_language.rstrip()  
+print(f"\t{favorite_language}!~~~!")  
+  
+favorite_language=" python "  
+favorite_language=favorite_language.strip()  
+print(f"\t{favorite_language}!~~~!")  
+</code></pre>
+<h1>变量反复的赋值和调用非常麻烦，</h1>
+<p>repr()是Python中的一个内置函数，它返回一个对象的“官方”字符串表示，也就是说，这个字符串表示<br>
+通常可以用来重新创建该对象。当你调用repr()函数时，Python会尝试找到一个字符串，该字符串在传递给内置的eval()函数时，  能够产生和原始对象相同的对象。</p>
+<ul>
+<li>repr()的主要用途是调试和开发。它生成的字符串通常包含更多关于对象的信息，有时甚至是该对象的有效Python表达式。</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">favorite_language="    python    "  
+print(repr(favorite_language).rstrip())  
+print(repr(favorite_language).strip()) 
+</code></pre>
+<h1>括号取得不一样，</h1>
+<p>结果差别很大。注意括号的位置,repr可以调用原始变量</p>
+<pre class="notranslate"><code class="notranslate">print(repr(favorite_language.rstrip()))  
+print(favorite_language)  
+print(repr(favorite_language))  
+print(repr(favorite_language.lstrip()))  
+print(repr(favorite_language.strip())) 
+</code></pre>
+<h1>删除前缀</h1>
+<pre class="notranslate"><code class="notranslate">nostarch_url="http://nostarch.com"  
+print(nostarch_url.removeprefix("http://"))
+</code></pre>
+<h2>第五章 列表</h2>
+<h1>课程5.4 if语句处理列表</h1>
+<pre class="notranslate"><code class="notranslate">print("使用if处理列表")  
+requested_toppings = ['mushrooms', 'green peppers', 'extra cheese']  
+for requested_topping in requested_toppings:  
+    print(f"Adding {requested_topping}.")  
+print("\nFinished making your pizza!")
+</code></pre>
+<ul>
+<li>列表循环调用，嵌套if语句进行判断，最后输出</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">requested_toppings = ['mushrooms', 'green peppers', 'extra cheese']  
+for requested_topping in requested_toppings:  
+    if requested_topping == 'green peppers':  
+        print("Sorry, we are out of green peppers right now.")  
+    else:  
+        print(f"Adding {requested_topping}.")  
+print("\nFinished making your pizza!")
+</code></pre>
+<ul>
+<li>多个列表</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">print("使用多个列表")  
+available_toppings = ['mushrooms', 'olives', 'green peppers', 'pepperoni', 'pineapple', 'extra cheese']  
+requested_toppings = ['mushrooms', 'french fries', 'extra cheese']  
+for requested_topping in requested_toppings:  
+    if requested_topping in available_toppings:  
+        print(f"Adding {requested_topping}.")  
+    else:  
+        print(f"Sorry, we don't have {requested_topping}.")  
+print("\nFinished making your pizza!")
+</code></pre>
+<ul>
+<li>不错的案例，关于如何判断用户是否注册了
+<ul>
+<li>这个名义上2个列表，实际都生成了user.lower的2个小写列表，相当于四个列表在里面参与计算。</li>
+</ul>
+</li>
+</ul>
+<pre class="notranslate"><code class="notranslate"># 当前已有的用户列表  
+current_users = ['user1', 'admin', 'user3', 'user4', 'user5']  
+  
+# 希望注册的新用户列表  
+new_users = ['user6', 'Admin', 'user7', 'User3', 'user8']  
+  
+# 创建一个包含current_users中用户名的小写版本的新列表,这个很重要！！！！确保比较时，不区分大小写。要多看几次！！！  
+current_users_lower = [user.lower() for user in current_users]
+
+# 遍历新用户列表，检查每个用户名是否已被使用  
+for new_user in new_users:  
+    if new_user.lower() in current_users_lower:  
+        print(f"Username '{new_user}' has already been used. Please enter a different username.")  
+    else:  
+        print(f"Username '{new_user}' is available.")
+</code></pre>
+<h2>六、列表</h2>
+<h3>6.1 列表的基本操作</h3>
+<ul>
+<li>列表的定义和读值</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">print("一个简单的字典")  
+alien_0 = {'color': 'green', 'points': 5}  
+print(alien_0['color'])  
+print(alien_0['points'])  
+  
+new_points = alien_0['points']  
+print(f"You just earned {new_points} points!")
+</code></pre>
+<ul>
+<li>列表新增键值对</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">print("添加键对值")  
+alien_0 = {'color': 'green', 'points': 5}  
+print(alien_0)  
+alien_0['x_position'] = 0   # 直接新增键值对  
+alien_0['y_position'] = 25  # 直接新增第二组键值对  
+print(alien_0)
+
+# 6.2.4 修改字典中的值  
+print("修改字典中的值")  
+alien_0 = {'color': 'green'}  
+print(f"The alien is {alien_0['color']}.")  
+alien_0['color'] = 'yellow'     # 直接修改值  
+print(f"The alien is now {alien_0['color']}.")
+</code></pre>
+<ul>
+<li>字典中键值对的提取，计算的综合应用</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">#*** 非常好的例子，通过修改外星人字典的值，改变外星人的行为，通过调整speed，改变x_position的表现  
+alien_0 = {'x_position': 0, 'y_position': 25, 'speed': 'medium'}  
+print(f"Original position: {alien_0['x_position']}")   # 读字典初始值，original position不是新增变量，只是字符串，注意了  
+ # 向右移动外星⼈  
+ # 根据当前速度确定将外星⼈向右移动多远  
+if alien_0['speed'] == 'slow':     # if语句+字典键对值提取+布尔表达式判定  
+    x_increment = 1                # 新增变量，作为x_position的增量  
+elif alien_0['speed'] == 'medium':  
+    x_increment = 2  
+else:  
+ # 这个外星⼈的移动速度肯定很快  
+    x_increment = 3  
+ # 新位置为旧位置加上移动距离  
+alien_0['x_position'] = alien_0['x_position'] + x_increment   #字典中的键对值的值是可以进行运算的。  
+print(f"New position: {alien_0['x_position']}")
+</code></pre>
+<h2>练习 6.1print("练习6.1")</h2>
+<ul>
+<li>遍历字典，提取key和value</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">person = {  
+    'first_name': 'John',  
+    'last_name': 'Doe',  
+    'age': 30,  
+    'city': 'New York'  
+}  
+  
+# 遍历字典并打印每项信息  
+for key, value in person.items():  
+    print(f"{key}: {value}")
+</code></pre>
+<ul>
+<li>提取key和value的语法，应该要熟悉</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">print("6.3 遍历字典")  
+# 遍历所有的键对值  
+favorite_languages = {  
+ 'jen': 'python',  
+ 'sarah': 'c',  
+ 'edward': 'rust',  
+ 'phil': 'python',  
+ }  
+for name, language in favorite_languages.items():  
+    print(f"{name.title()}'s favorite language is {language.title()}.")
+</code></pre>
+<h2>遍历字典中的所有键！！ .key()</h2>
+<pre class="notranslate"><code class="notranslate">print("遍历字典中的所有键-2！！")  
+favorite_languages = {                  # 定义字典  
+    'jen': 'python',  
+    'sarah': 'c',  
+    'edward': 'rust',  
+    'phil': 'python',  
+ }  
+friends = ['phil', 'sarah']              # 新增一个列表friends  
+for name in favorite_languages.keys():   # for循环，读取字典的键进入变量name  
+    print(f"Hi {name.title()}.")         # 打印字典的键  
+    if name in friends:                  # if语句，判定name在不在friends列表里  
+        language = favorite_languages[name].title()     # 读取字典的值，并转化大写进入变量language  
+        print(f"\t{name.title()}, I see you love {language}!")    #输出结果，打印出name和language
+</code></pre>
+<pre class="notranslate"><code class="notranslate">print("遍历字典中的所有值")  
+favorite_languages = {  
+    'jen': 'python',  
+    'sarah': 'c',  
+    'edward': 'rust',  
+    'phil': 'python',  
+    }  
+print("The following languages have been mentioned:")  
+for language in favorite_languages.values():  
+    print(language.title())  
+# set()集合，帮你找出独一无二的元素  
+print("帮你找出独一无二的元素")  
+favorite_languages = {  
+    'jen': 'python',  
+    'sarah': 'c',  
+    'edward': 'rust',  
+    'phil': 'python',  
+    }  
+print("The following languages have been mentioned:")  
+for language in set(favorite_languages.values()):  
+    print(language.title())
+</code></pre>
+<ul>
+<li>未完待续</li>
+</ul></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://bannysway.github.io">老铁的碎碎念</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z', 'copy': 'M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z', 'check': 'M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+cmButton=document.getElementById("cmButton");
+    span=document.createElement("span");
+    span.setAttribute("class","Counter");
+    span.innerHTML="3";
+    cmButton.appendChild(span);
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","bannysway/bannysway.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const createClipboardHTML = (codeContent, additionalClasses = '') => `
+        <pre class="notranslate"><code class="notranslate">${codeContent}</code></pre>
+        <div class="clipboard-container position-absolute right-0 top-0 ${additionalClasses}">
+            <clipboard-copy class="ClipboardButton btn m-2 p-0" role="button" style="display: inherit;">
+                <svg height="16" width="16" class="octicon octicon-copy m-2"><path d="${IconList["copy"]}"></path></svg>
+                <svg height="16" width="16" class="octicon octicon-check color-fg-success m-2 d-none"><path d="${IconList["check"]}"></path></svg>
+            </clipboard-copy>
+            <div class="copy-feedback">Copied!</div>
+        </div>
+    `;
+
+    const handleCodeElements = (selector = '') => {
+        document.querySelectorAll(selector).forEach(codeElement => {
+            const codeContent = codeElement.innerHTML;
+            const newStructure = document.createElement('div');
+            newStructure.className = 'snippet-clipboard-content position-relative overflow-auto';
+            newStructure.innerHTML = createClipboardHTML(codeContent);
+
+            const parentElement = codeElement.parentElement;
+            if (selector.includes('highlight')) {
+                parentElement.insertBefore(newStructure, codeElement.nextSibling);
+                parentElement.removeChild(codeElement);
+            } else {
+                parentElement.parentElement.replaceChild(newStructure, parentElement);
+            }
+        });
+    };
+
+    handleCodeElements('pre.notranslate > code.notranslate');
+    handleCodeElements('div.highlight > pre.notranslate');
+
+    let currentFeedback = null;
+    document.querySelectorAll('clipboard-copy').forEach(copyButton => {
+        copyButton.addEventListener('click', () => {
+            const codeContent = copyButton.closest('.snippet-clipboard-content').innerText;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = codeContent;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            const copyIcon = copyButton.querySelector('.octicon-copy');
+            const checkIcon = copyButton.querySelector('.octicon-check');
+            const copyFeedback = copyButton.nextElementSibling;
+
+            if (currentFeedback && currentFeedback !== copyFeedback) {currentFeedback.style.display = 'none';}
+            currentFeedback = copyFeedback;
+
+            copyIcon.classList.add('d-none');
+            checkIcon.classList.remove('d-none');
+            copyFeedback.style.display = 'block';
+            copyButton.style.borderColor = 'var(--color-success-fg)';
+
+            setTimeout(() => {
+                copyIcon.classList.remove('d-none');
+                checkIcon.classList.add('d-none');
+                copyFeedback.style.display = 'none';
+                copyButton.style.borderColor = '';
+            }, 2000);
+        });
+    });
+});
+
+</script>
+
+
+</html>
