@@ -1,5 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>老铁的碎碎念</title><link>https://bannysway.github.io</link><description>自留地，科技、艺术，哲学，文学</description><copyright>老铁的碎碎念</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/119055643?v=4</url><title>avatar</title><link>https://bannysway.github.io</link></image><lastBuildDate>Sat, 15 Mar 2025 14:57:06 +0000</lastBuildDate><managingEditor>老铁的碎碎念</managingEditor><ttl>60</ttl><webMaster>老铁的碎碎念</webMaster><item><title>Java项目基础</title><link>https://bannysway.github.io/post/Java-xiang-mu-ji-chu.html</link><description>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>老铁的碎碎念</title><link>https://bannysway.github.io</link><description>自留地，科技、艺术，哲学，文学</description><copyright>老铁的碎碎念</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/119055643?v=4</url><title>avatar</title><link>https://bannysway.github.io</link></image><lastBuildDate>Sat, 15 Mar 2025 15:03:35 +0000</lastBuildDate><managingEditor>老铁的碎碎念</managingEditor><ttl>60</ttl><webMaster>老铁的碎碎念</webMaster><item><title>开放式基金</title><link>https://bannysway.github.io/post/kai-fang-shi-ji-jin.html</link><description>
+&gt; [!info] 重点概念
+&gt; 
+
+- 区分净值和累计净值
+- 了解购买当下的净值
+- 申购和赎回较高的手续费
+- 
+
+
+&gt; [!important] ## 基础知识  
+
+开放式基金的运行模式是采用一种严格的制衡关系。</description><guid isPermaLink="true">https://bannysway.github.io/post/kai-fang-shi-ji-jin.html</guid><pubDate>Sat, 15 Mar 2025 15:03:10 +0000</pubDate></item><item><title>Java项目基础</title><link>https://bannysway.github.io/post/Java-xiang-mu-ji-chu.html</link><description>
 &gt; [!summary] 前后端和接口的概念
 &gt; Contents
 

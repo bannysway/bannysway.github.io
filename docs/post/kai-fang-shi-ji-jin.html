@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/119055643?v=4"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="
+> [!info] 重点概念
+> 
+
+- 区分净值和累计净值
+- 了解购买当下的净值
+- 申购和赎回较高的手续费
+- 
+
+
+> [!important] ## 基础知识  
+
+开放式基金的运行模式是采用一种严格的制衡关系。">
+<meta property="og:title" content="开放式基金">
+<meta property="og:description" content="
+> [!info] 重点概念
+> 
+
+- 区分净值和累计净值
+- 了解购买当下的净值
+- 申购和赎回较高的手续费
+- 
+
+
+> [!important] ## 基础知识  
+
+开放式基金的运行模式是采用一种严格的制衡关系。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bannysway.github.io/post/kai-fang-shi-ji-jin.html">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/119055643?v=4">
+<title>开放式基金</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">开放式基金</h1>
+<div class="title-right">
+    <a href="https://bannysway.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/bannysway/bannysway.github.io/issues/3" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><blockquote>
+<p>[!info] 重点概念</p>
+</blockquote>
+<ul>
+<li>区分净值和累计净值</li>
+<li>了解购买当下的净值</li>
+<li>申购和赎回较高的手续费</li>
+<li></li>
+</ul>
+<blockquote>
+<p>[!important] ## 基础知识</p>
+</blockquote>
+<p>开放式基金的运行模式是采用一种严格的制衡关系。也就是说，<em>基金资产的管理与保管是分开的，基金公司管理我们的钱的投资运作，而钱一般是托管在银行的</em>。这样，无论是基金公司还是银行倒闭，都不能动用我们的钱，可以说，我们的钱是安全的。</p>
+<p>开放式基金是一种基金运作方式，<em>其特点是基金份额总额不固定</em>，投资者可以根据需要随时申购或赎回基金份额。<em>这种基金也被称为共同基金。</em><br>
+开放式基金可以发售新的基金份额来满足投资者的需求，同时也需要根据投资者的要求买回其持有的基金份额。投资者可以通过基金销售机构购买基金，使得基金资产和规模相应增加，也可以将所持有的基金份额卖给基金并收回现金，使得基金资产和规模相应减少。</p>
+<p>开放式基金可以分为几种类型。根据是否能在证券交易所挂牌交易，可以分为上市交易型开放式基金和契约型开放式基金。<br>
+上市交易型开放式基金可以在证券交易所挂牌交易，<em>如交易型开放式指数基金（ETF）和上市开放式基金（LOF）</em>。<br>
+<em>契约型开放式基金(COEF)</em> 则不能在证券交易所挂牌交易，但可以通过“申购”、“赎回”来进行交易。<br>
+此外，根据投资对象的不同，还可以分为股票基金、债券基金、混合基金、货币市场基金等。<br>
+<em>与封闭式基金相比，开放式基金在激励约束机制、流动性、透明度和投资便利程度等方面都具有较大的优势</em>。<em>封闭式基金的基金份额总额在基金合同期限内固定不变</em>，基金份额可以在证券交易场所交易，但基金份额持有人不得申请赎回。<br>
+<em>市场上还有一种定期开放基金，也是开放式基金的一种</em>，但与普通开放式基金不同，它并不是在任何交易日都可以自由进行买卖，而是按照一个固定的周期开放。这种基金大多为债券型基金，通过定期开放的设计可以保持基金的规模相对稳定，对于提高收益有重要作用。</p>
+<blockquote>
+<p>[!abstract] ## 特点和缺点</p>
+</blockquote>
+<p><strong>开放式基金</strong>的特点包括：</p>
+<ol>
+<li><strong>基金份额不固定</strong>：投资者可以随时申购和赎回基金份额，基金规模因此可以根据投资者的需求变化。</li>
+<li><strong>灵活性</strong>：开放式基金提供了较高的流动性，方便投资者根据市场情况调整投资组合。</li>
+<li><strong>透明度高</strong>：开放式基金的净值每日公布，使投资者能够实时了解基金的表现。</li>
+<li><strong>投资策略丰富</strong>：涵盖股票、债券、货币市场等多种投资领域，满足不同风险偏好的投资者。</li>
+<li>未知价格的购买，每种基金的净值都是当天股票交易市场收盘以后，再根据其所持有的证券的市值来计算的。
+<ul>
+<li>三点以前，按照当天净值计算、三点以后按照第二天的净值计算。</li>
+</ul>
+</li>
+<li>截至目前，202411，国家对基金收入免税，"个人投资者在买卖、申购赎回基金时获得的差价收入目前暂免征个人所得税。“</li>
+</ol>
+<p>但开放式基金也有其缺点：</p>
+<ol>
+<li><strong>申购和赎回成本</strong>：频繁的申购和赎回可能导致较高的手续费，影响投资收益。</li>
+<li><strong>流动性风险</strong>：在市场极端情况下，可能面临较大的赎回压力，导致基金经理不得不低价抛售股票，损害基金净值。</li>
+</ol>
+<blockquote>
+<p>[!tip] ## 购买和计算收益</p>
+</blockquote>
+<ul>
+<li>
+<p>净值：</p>
+<ul>
+<li>净值其实就是开放式基金的<em>销售价格</em>，</li>
+<li>是这样计算的：在一个基金刚刚开始建立的时候，<em>净值</em>都是1元。你用1万元（扣除认购费后）就可以买1万份基金。然后，基金公司就用募集来的这笔钱，如50亿元（50亿份基金）去投资证券市场。也许1年以后，扣除他们要的佣金，还剩下60亿元。这60亿元分到50亿份基金上面，每份基金就值1.2元，这时候的净值就是1.2元。显然，赚的钱越多，基金的净值也就越高。但如果亏了，净值就会降低，甚至降到1元以下。</li>
+<li>之所以叫开放式基金，<em>意思是一个基金的总份额是不定的</em>。反正大家都按照当天的净值来计算，买的人多了，基金的规模就大；买的人少了，基金的规模就小。</li>
+<li>未知价格购买：每种基金的净值都是在当天股票交易市场收盘以后再根据其所持有的证券的市值来计算的，一天就一个值，这个值在北京时间下午3点以后才知道。但你购买基金的时候，如果在下午3点以前提交申请购买单，那你最终购买基金的净值就按下午3点以后计算出来的当天净值来算。如果是下午3点以后提交的购买申请，那就按照第二天的净值来计算。</li>
+</ul>
+</li>
+<li>
+<p>分红：</p>
+<ul>
+<li>开放式基金会分红的，会不定期地分配给你投资收益。你可以选择把分红留给自己，即所谓的<em>现金分红</em>，也可以选择<em>红利再投资</em>。分红的时候，由于基金的总资产降低了，净值也就下降了。</li>
+</ul>
+</li>
+<li>
+<p>理论上的净值：</p>
+<ul>
+<li>所以，在看一个基金的净值时会有两个，</li>
+<li>一个叫“<em>净值</em>”​，一个叫“<em>累计净值</em>”​。 <strong>​“累计净值”不考虑分红给基金净值带来的降低因素，反映了基金成立以来总体的发展情况，</strong> 而“净值”则是你交易时候的真正价格。</li>
+</ul>
+</li>
+<li>
+<p>基金收益税：</p>
+<ul>
+<li>目前国家对个人的基金收益是不收税的。所以，如果你要和银行收益进行比较，一定要记住银行利息还要扣除利息税，而基金收益是纯收益。</li>
+</ul>
+</li>
+<li>
+<p>最小投资规模：</p>
+<ul>
+<li>一般基金最小的申购额是1000元，也就是你有1000元就可以开始投资了，甚至有些基金投资方式，如银行的定投，可以更少，几百元就可以。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>[!summary] ## 基本分类</p>
+</blockquote>
+<ul>
+<li>股票基金主要投资在股票市场，</li>
+<li>债券基金主要投资在债券市场（如国债等）​，</li>
+<li>货币基金主要是投资在短期货币市场。
+<ul>
+<li>一般来讲，股票基金风险大、净值波动大，但长期收益也高；债券基金稳定一些，收益也低一些；货币基金几乎没有风险，但收益更低，现阶段一般是每年2%左右的收益。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>[!warning] ## 风险</p>
+</blockquote>
+<ul>
+<li>
+<p>风险和收益：</p>
+<ul>
+<li>共生关系，一定要记住这点，没有高收益低风险的事情。要想降低风险只有增加投资期限，或者买债券基金、货币基金，但这样做收益也低。所以，投资股票基金最好是用养老和子女上大学的钱，咱们有接近或者超过20年的投资周期，就算亏本也不会有多大，这其实也是基金投资的根本目的。</li>
+</ul>
+</li>
+<li>
+<p>股票基金的风险</p>
+<ul>
+<li>激进的、高风险和高收益的基金</li>
+<li>短期有风险，而且风险很大；长期则无风险，或者说风险很小。
+<ul>
+<li>2002年美国77年股票交易历史。如果1925年我们投资1美元在大公司股票上，到2002年，收益是1775美元。在这77年中，包含了多次股市崩溃，如20世纪30年代的股灾、1986年的“黑色星期一”​、2000年的“网络泡沫”​，最终的收益依然是1775倍，而同期通货膨胀是10倍。如果你真能投资77年，平均每年收益将达到12.2%，显然大大地赚了一笔。</li>
+<li>但这77年中，如果我们独立地看每一年，却有23年是亏本的，也就是说，有30%的年份是亏钱的。亏损幅度最大的一年达到了43.34%，而在盈利年份，最赚钱的一次年收益是53.99%。77年中，70%的年份是赚钱的，而且赚钱的幅度也比亏损的大，所以最终结果是赚钱的。</li>
+<li>但这些盈利年和亏损年的分布是非常随机的，也就是没有任何规律可以找寻。不是说今年亏损，明年也会亏损；或者，今年赚钱，明年就会亏损。市场是根本没有办法精确预测的。所以，我们如果在77年中的任意一年开始投资，有30%的概率会亏钱，70%的概率会赚钱。<em>但如果我们连续投资5年</em>，5年一平均，亏本的概率就降到了接近10%。亏损幅度最大的一次年平均收益为-12%，赚钱幅度最大的一次为24%，波动明显变小。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>债券投资的风险：</p>
+<ul>
+<li>稳健型，低风险和低收益的基金</li>
+<li>美国的历史，投资期达到5年的时候，亏损的概率就不到5%了。而且，也要看到在前面说的77年中，美国大公司债券的年平均收益只有6.2%，也就是说经过77年，1美元仅仅变成了60美元。相比股票的收益1775美元，简直是天壤之别，但风险却小得多，投资5年亏本的概率和投资股票接近10年的概率相当。货币基金不会亏本，没有风险，但2%的收益在77年后，1美元仅仅是4.5美元，甚至还无法抵消通货膨胀对资产的侵蚀。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>[!summary] ## 开放式基金和封闭式基金的区别</p>
+</blockquote>
+<p>开放式基金和封闭式基金是两种不同类型的投资基金，它们的主要区别在于基金的规模和份额的流通性。</p>
+<ol>
+<li><strong>开放式基金的“开放”</strong>：
+<ul>
+<li><strong>规模可变</strong>：开放式基金的规模不是固定的，可以根据投资者的申购（购买）和赎回（卖出）而变化。这意味着基金可以随时根据投资者的需求发行新的份额或赎回现有份额。</li>
+<li><strong>流动性高</strong>：开放式基金的份额通常可以在任何工作日进行申购和赎回，给投资者提供了较高的流动性。</li>
+<li><strong>价格基于净资产价值</strong>：开放式基金的份额价格通常基于基金的净资产价值（NAV），即基金的净资产除以总份额数。投资者申购和赎回的价格通常就是当日的净资产价值。</li>
+</ul>
+</li>
+<li><strong>封闭式基金的“封闭”</strong>：
+<ul>
+<li><strong>规模固定</strong>：封闭式基金在首次发行后，其规模是固定的，不会再发行新的份额。投资者不能随意申购或赎回份额。</li>
+<li><strong>流动性较低</strong>：封闭式基金的份额通常在证券交易所上市交易，其流通性依赖于二级市场的交易活跃度。如果市场上买家或卖家不多，流动性可能会较低。</li>
+<li><strong>价格受市场供求影响</strong>：封闭式基金的价格不仅受净资产价值影响，还受到市场供求关系的影响。因此，其交易价格可能高于或低于净资产价值。<br>
+总结来说，开放式基金的“开放”主要体现在其规模的可变性和份额的高流动性上，而封闭式基金则在这两个方面表现出“封闭”的特性。投资者的选择应基于自己的投资目标、风险承受能力和对流动性的需求。</li>
+</ul>
+</li>
+</ol></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://bannysway.github.io">老铁的碎碎念</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+cmButton=document.getElementById("cmButton");
+    span=document.createElement("span");
+    span.setAttribute("class","Counter");
+    span.innerHTML="1";
+    cmButton.appendChild(span);
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","bannysway/bannysway.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>
