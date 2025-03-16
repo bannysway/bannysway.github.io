@@ -1,5 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>老铁的碎碎念</title><link>https://bannysway.github.io</link><description>自留地，科技、艺术，哲学，文学</description><copyright>老铁的碎碎念</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/119055643?v=4</url><title>avatar</title><link>https://bannysway.github.io</link></image><lastBuildDate>Sat, 15 Mar 2025 15:46:04 +0000</lastBuildDate><managingEditor>老铁的碎碎念</managingEditor><ttl>60</ttl><webMaster>老铁的碎碎念</webMaster><item><title>PYTHON基础语法1</title><link>https://bannysway.github.io/post/PYTHON-ji-chu-yu-fa-1.html</link><description>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>老铁的碎碎念</title><link>https://bannysway.github.io</link><description>自留地，科技、艺术，哲学，文学</description><copyright>老铁的碎碎念</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/119055643?v=4</url><title>avatar</title><link>https://bannysway.github.io</link></image><lastBuildDate>Sun, 16 Mar 2025 03:31:57 +0000</lastBuildDate><managingEditor>老铁的碎碎念</managingEditor><ttl>60</ttl><webMaster>老铁的碎碎念</webMaster><item><title>Docker基础教程</title><link>https://bannysway.github.io/post/Docker-ji-chu-jiao-cheng.html</link><description>
+配合[[NAS里面关于docker的部署路径图]]食用
+
+
+&gt; [!note] ## Docker重要概念
+
+![[Docker-img-240510_212446.png]]
+
+
+![[Docker-img-240510_225037.png]]
+### 镜像 Docker images
+- 只读模板，用来创建容器
+	- 它包含运行应用程序所需的文件系统和配置，比如代码、依赖、工具、库等。</description><guid isPermaLink="true">https://bannysway.github.io/post/Docker-ji-chu-jiao-cheng.html</guid><pubDate>Sun, 16 Mar 2025 03:31:32 +0000</pubDate></item><item><title>PYTHON基础语法1</title><link>https://bannysway.github.io/post/PYTHON-ji-chu-yu-fa-1.html</link><description>
 
 &gt; [!important] ## 基础知识  
 
